@@ -6,7 +6,7 @@ int player;
 
 int main()
 {
-    printf("start\n");
+    //printf("start\n");
     int gameStatus = -1;
     char mark;
     player = 2;
@@ -34,10 +34,10 @@ int main()
 
     displayBoard();
 
-    if (gameStatus == 1) { printf("==>\aPlayer %d win ", player); }
-    else { printf("==>\aGame draw"); }
+    if (gameStatus == 1) { printf("\aPlayer %d win\n", player); }
+    else { printf("\aGame draw"); }
 
-    printf("end\n");
+    //printf("end\n");
 
     return 0;
 
