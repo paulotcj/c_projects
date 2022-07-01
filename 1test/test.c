@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     
 
     //in most cases we can loop until i = 42
-    for(int i = 0; i < 43 ; i=i+1)
+    for(int i = 0; i < 39 || argv[i] != NULL ; i=i+1)
     {
         printf("argv[%i] : %s\n",i,argv[i]);
     }
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 
     printf("-------------------------------------\n");
 
-    for(int i = 0; i < 42 || argv[i] != NULL ; i=i+1)
+    for(int i = 0; i < 39 || argv[i] != NULL ; i=i+1)
     {
         printf("argv[%i] : %s\n",i,argv[i]);
     }
@@ -264,14 +264,18 @@ int main(int argc, char *argv[])
     printf("-------------------------------------\n");
 
     int num4 = 25;
+    int num5 = &num4;
     int *ptrNum4 = &num4;
 
     printf("num4 : %d\n", num4);
-    printf("&num4 : %d\n", &num4);
+    printf("&num4 : %d\n\n\n", &num4);
+
+    printf("num5 : %d\n", num5);
+    printf("&num5 : %d\n\n\n", &num5);
 
     printf("*ptrNum4 : %d\n", *ptrNum4);
     printf("ptrNum4 : %d\n", ptrNum4);
-    //printf("&ptrNum4 : %d\n", &ptrNum4);
+    printf("&ptrNum4 : %d\n", &ptrNum4);
 
     return 0;
 }
