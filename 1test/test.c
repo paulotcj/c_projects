@@ -1,3 +1,5 @@
+//NOTE: This program is meant to be compiled on macOS or Linux. The last compilation was made on macOS
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
@@ -258,6 +260,18 @@ int main(int argc, char *argv[])
             printf("int_arr3[%d][%d]: %d\n", i, j , int_arr3[i][j]);
         }
     }
+
+    printf("-------------------------------------\n");
+
+    int num4 = 25;
+    int *ptrNum4 = &num4;
+
+    printf("num4 : %d\n", num4);
+    printf("&num4 : %d\n", &num4);
+
+    printf("*ptrNum4 : %d\n", *ptrNum4);
+    printf("ptrNum4 : %d\n", ptrNum4);
+    //printf("&ptrNum4 : %d\n", &ptrNum4);
 
     return 0;
 }
