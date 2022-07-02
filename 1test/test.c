@@ -277,5 +277,5 @@ int main(int argc, char *argv[])
     printf("ptrNum4 : %d\n", ptrNum4);
     printf("&ptrNum4 : %d\n", &ptrNum4);
 
-    return 0;
+
 }
