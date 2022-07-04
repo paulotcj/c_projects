@@ -2,6 +2,8 @@
 #include <string.h>
 
 #include <stdbool.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 //extern long double strtod(const char *, char **);
 
