@@ -89,9 +89,9 @@ int main()
     }
 
     printf("-------------------------------------\n");
-
-    //char str[30] = "20.30300 This is test";
-    char str[30] = "20.30300";
+    //if your conversion on windows is not working, double check on any mac or linux machine with their native gcc compiler
+    // you might find more useful information there
+    char str[30] = "20.30300 This is test";
     char *ptr;
     double ret;
 
