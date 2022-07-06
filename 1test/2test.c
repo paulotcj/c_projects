@@ -5,7 +5,16 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-//extern long double strtod(const char *, char **);
+void binprintf(int v)
+{
+    unsigned int mask=1<<((sizeof(int)<<3)-1);
+    while(mask) {
+        printf("%d", (v&mask ? 1 : 0));
+        mask >>= 1;
+    }
+}
+
+
 
 int main()
 {
@@ -97,9 +106,25 @@ int main()
 
     ret = strtod(str, &ptr);
     printf("The number(double) is %lf\n", ret);
-    printf("String part is |%s|", ptr);
+    printf("String part is |%s|\n", ptr);
+
+    printf("-------------------------------------\n");
+
+    int number = 99, *pNumber;
+    pNumber = &number;
+
+    printf("number: %d, &number: %d, sizeof(number) : %d size_t \n",number, &number,sizeof(number));
+    printf("*pNumber: %d, pNumber: %d, &pNumber: %d, sizeof(pNumber) : %d size_t \n",*pNumber,pNumber, &pNumber, sizeof(pNumber));
+    printf("sizeof(char) : %d size_t\n", sizeof(char));
+    printf("sizeof(int*) : %d size_t\n", sizeof(int*));
+    printf("note: In 32bits machines size_t = 4 bytes. In 64bits machiens size_t = 8 bytes\n");
 
 
+    binprintf(number);
+    printf("\n");
+
+
+    
 
 
 
