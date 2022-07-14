@@ -117,11 +117,12 @@ int main()
     printf("*pNumber: %d, pNumber: %d, &pNumber: %d, sizeof(pNumber) : %d size_t \n",*pNumber,pNumber, &pNumber, sizeof(pNumber));
     printf("sizeof(char) : %d size_t\n", sizeof(char));
     printf("sizeof(int*) : %d size_t\n", sizeof(int*));
-    printf("note: In 32bits machines size_t = 4 bytes. In 64bits machiens size_t = 8 bytes\n");
+    printf("note: In 32bits machines size_t = 4 bytes. In 64bits machines size_t = 8 bytes\n");
 
 
     binprintf(number);
     printf("\n");
+    printf("&pNumber: %p \n",&pNumber);
 
 
     
