@@ -11,6 +11,38 @@ void func1(long arr1[])
 
 }
 
+void copyString(char *to, char *from)
+{
+    while( *from ) //the null character is equal to 0, therefore FALSE
+    {
+        *to++ = *from++;
+    }
+
+    *to = '\0';
+}
+
+int stringLen(char *stringParam)
+{
+    int length = 0;
+    while(*stringParam)
+    {
+        stringParam++;
+        length++;
+    }
+    return length;
+}
+
+int stringLen2(char *stringParam)
+{
+    const char *firstChar = stringParam;
+    while(*stringParam)
+    {
+        stringParam++;
+    }
+
+    return stringParam - firstChar;
+}
+
 int main(int argc, char *argv[])
 {
     printf("hello\n");
@@ -121,6 +153,17 @@ int main(int argc, char *argv[])
     printf("sizeof(longArr1): %d , sizeof(longArr1[0]: %d \n", sizeof(longArr1), sizeof(longArr1[0]) );
 
     func1(longArr1);
+
+    char string1[] = "A string to be copied.";
+    char string2[50];
+
+    copyString(string2, string1);
+    printf("string2: %s", string2);
+
+    printf("stringLen(string1) : %d \n",stringLen(string1) );
+    printf("stringLen2(string1) : %d \n",stringLen2(string1) );
+
+    
 
     return 0;
 }
