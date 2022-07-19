@@ -1,0 +1,2 @@
+first string from executable
+second string from executable
